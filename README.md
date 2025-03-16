@@ -10,7 +10,7 @@ React + TypeScript application to **fetch, display, and add subscribers** using 
 ✅ **Material UI** for a modern and responsive design  
 
 🔗 Live Demo
-🌐 [View Live Demo](https://subscriber-c5wthvk2u-orghodebs-projects.vercel.app/)
+🌐 [View Live Demo](https://subscriber-app-three.vercel.app/)
 
 ## 📌 Technologies Used  
 
