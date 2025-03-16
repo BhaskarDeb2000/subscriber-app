@@ -54,66 +54,75 @@ const AddSubscriber: React.FC = () => {
   return (
     <Box
       sx={{
-        width: 400,
-        padding: 3,
-        borderRadius: 2,
-        boxShadow: 3,
-        textAlign: "center",
-        backgroundColor: "#fff",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        minHeight: "100vh",
       }}
     >
-      <Typography variant="h5" mb={2}>
-        Add Subscriber
-      </Typography>
+      <Box
+        sx={{
+          width: 400,
+          padding: 3,
+          borderRadius: 2,
+          boxShadow: 3,
+          textAlign: "center",
+          backgroundColor: "#fff",
+        }}
+      >
+        <Typography variant="h5" mb={2}>
+          Add Subscriber
+        </Typography>
 
-      <form onSubmit={handleSubmit}>
-        <TextField
-          label="Email"
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          fullWidth
-          required
-          sx={{ marginBottom: 2 }}
-        />
-        <TextField
-          label="First Name"
-          value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
-          fullWidth
-          required
-          sx={{ marginBottom: 2 }}
-        />
-        <TextField
-          label="Last Name"
-          value={lastName}
-          onChange={(e) => setLastName(e.target.value)}
-          fullWidth
-          required
-          sx={{ marginBottom: 2 }}
-        />
+        <form onSubmit={handleSubmit}>
+          <TextField
+            label="Email"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            fullWidth
+            required
+            sx={{ marginBottom: 2 }}
+          />
+          <TextField
+            label="First Name"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            fullWidth
+            required
+            sx={{ marginBottom: 2 }}
+          />
+          <TextField
+            label="Last Name"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+            fullWidth
+            required
+            sx={{ marginBottom: 2 }}
+          />
 
-        <Button
-          type="submit"
-          variant="contained"
-          color="primary"
-          fullWidth
-          disabled={loading}
-        >
-          {loading ? <CircularProgress size={24} /> : "Add Subscriber"}
-        </Button>
-      </form>
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            fullWidth
+            disabled={loading}
+          >
+            {loading ? <CircularProgress size={24} /> : "Add Subscriber"}
+          </Button>
+        </form>
 
-      {success && (
-        <Alert severity="success" sx={{ marginTop: 2 }}>
-          Subscriber added successfully!
-        </Alert>
-      )}
-      {error && (
-        <Alert severity="error" sx={{ marginTop: 2 }}>
-          {error}
-        </Alert>
-      )}
+        {success && (
+          <Alert severity="success" sx={{ marginTop: 2 }}>
+            Subscriber added successfully!
+          </Alert>
+        )}
+        {error && (
+          <Alert severity="success" sx={{ marginTop: 2 }}>
+            Subscriber added successfully!
+          </Alert>
+        )}
+      </Box>
     </Box>
   );
 };
